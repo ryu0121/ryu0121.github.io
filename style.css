@@ -1,0 +1,481 @@
+html, body{
+    margin: 0;         /* 余白の削除 */
+    padding: 0;        /* 余白の削除 */
+    width:100%;
+    height:100%;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    font-size: 15px; 
+    transition: 0.3s;
+    color: #c09f80;
+}
+    
+.button:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #c09f80;
+    color: #c09f80;
+    width: 0;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    -webkit-transition: .4s ease 0s;
+    transition: .4s ease 0s;
+}
+
+.button:hover {
+    text-decoration: none;
+    color: #c09f80;
+}
+
+.button:hover:before {
+    width: 100%;
+}
+
+#wrapper {
+    width:100%;
+    overflow:hidden;
+  }
+
+body {
+    width: 100%;
+}
+
+header {
+    background-image : url("images/back3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 520px;
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+}
+
+.fa-fw {
+    color: black;
+    font-size: 25px;
+    margin-left: 5px;
+    transition: 0.4s;
+}
+.fa-fw:hover {
+    color: gray;
+}
+
+.title {
+    position: absolute;
+        top: 45%;
+        left: 10%;
+}
+
+.title .thank {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 60px;
+    letter-spacing: .1em;
+}
+
+header .icons {
+    position: absolute;
+        bottom: 10%;
+        left: 6%;
+}
+
+.apps {
+    position: relative;
+}
+
+.apps p {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 2.6em;
+    color: black;
+    text-align: center;
+    margin-top: 14%;
+}
+
+.apps p:hover {
+    font-size: 3.1em;
+}
+
+
+/* section1 */
+.section1 {
+    margin-top: 8%;
+    margin-bottom: 18%;
+    position: relative;
+}
+
+.back--message {
+    font-family: 'Lobster', cursive;
+    color: #c09f80;
+    opacity: 0.4;
+    position: absolute;
+        top: 20rem;
+        left: 35rem;
+    transform: rotate(-8deg);
+    letter-spacing: 15px;
+    font-size: 200px;
+}
+
+.left--message {
+    position: absolute;
+        top: 16rem;
+        left: 2rem;
+    transform: rotate(-90deg);
+    letter-spacing: 5px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #565656;
+}
+
+.cat--div {
+    position: absolute;
+        top: 20%;
+        left: 12%;
+}
+.cat {
+    width: 230px;
+    height: 400px;
+}
+
+.gym--div {
+    position: absolute;
+        top: 50%;
+        left: 28%;
+}
+.gym {
+    width: 230px;
+    height: 400px;  
+}
+
+.youtube--div {
+    position: absolute;
+        top: 2%;
+        left: 40%;
+}
+.youtube {
+    width: 230px;
+    height: 400px;
+}
+
+.about {
+    margin-top: 7%;
+    padding-right: 4%;
+    margin-left: 62%;
+}
+
+.about--top {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #565656;
+    letter-spacing: .1em;
+    margin-bottom: 10%;
+}
+
+.about--intro {
+    margin-top: 5%;
+}
+
+.about--contact {
+    margin-top: 12%;
+}
+
+.about p {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #565656;
+    line-height: 1.8;
+}
+
+/* section2 */
+.section2 {
+    padding: 4% 0;
+    background-image: url("images/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.section2:before{
+    content: '';
+    background: inherit;/*.bgImageで設定した背景画像を継承する*/
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;/*重なり順序を一番下にしておく*/
+}
+
+.portfolio--top {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: white;
+    letter-spacing: .1em;
+}
+
+.card-img-top {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 0;
+}
+
+.card {
+    width: 20%;
+    margin-right: 3%;
+    background-color: rgba(212, 171, 124, 0.9);
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.card-title {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+    letter-spacing: .1em;
+    border-bottom: solid 2px white;
+    
+}
+
+.card-text {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    letter-spacing: .1em;
+}
+
+.btn {
+    margin-left: 10%;
+    background-color: rgba(112, 109, 109, 1);
+    color: white;
+    border-radius: 20px;
+}
+.btn:hover {
+    background-color: rgb(112, 109, 109, 0.8);
+    color: white;
+}
+
+.skills {
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 4%;
+}
+
+.charts {
+    list-style: none;
+}
+
+.skill--sets {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #565656;
+    letter-spacing: .1em;
+}
+
+.chart--top {
+    margin-left: 12%;
+}
+
+.chart--line {
+    background: linear-gradient(-90deg, rgba(243, 161, 85, 0.8), rgba(243, 161, 85, 0.6));
+    border-radius: 5px;
+}
+
+.chart--label {
+    margin-bottom: 1%;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 1.0em;
+    color: white;
+}
+
+.chart--text {
+    margin-bottom: 1%;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #565656;
+}
+
+/* section3 */
+
+.section3 {
+    padding: 4% 0;
+}
+
+.hobby--top {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #565656;
+    letter-spacing: .1em;
+}
+
+.english {
+    width:45%;
+}
+
+.english--parent {
+    position: relative;
+    height: 580px;
+}
+
+.english--div {
+    position: absolute;
+        top: 15%;
+        left: 55%;
+}
+
+.english--head {
+    font-size: 14em;
+    font-family: 'PT Serif', serif;
+    color: #c09f80;
+    opacity: 0.7;
+    height: 280px;
+}
+
+.english--top {
+    font-size: 2.0em;
+    font-family: 'PT Serif', serif;
+    letter-spacing: .1em;
+    color: #565656;
+    position: absolute;
+        top: 34%;
+        left: 40%;
+}
+
+.english--text {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #565656;
+    line-height: 1.8;
+    margin-left: 11%;
+    width: 480px;
+}
+
+.camera--parent {
+    position: relative;
+    height: 500px;
+}
+
+.camera--div {
+    margin-top: 8%;
+    margin-left: 7%;
+    width: 400px;
+}
+
+.camera--group {
+    width: 500px;
+}
+
+.camera--head {
+    line-height: 150px;
+    font-size: 14em;
+    font-family: 'PT Serif', serif;
+    color: #c09f80;
+    opacity: 0.7;
+    height: 250px;
+    position: absolute;
+        top: 0px;
+        left:810px;
+}
+
+.camera--top {
+    font-size: 2.0em;
+    font-family: 'PT Serif', serif;
+    letter-spacing: .1em;
+    color: #565656;
+    position: absolute;
+        top: 53px;
+        left: 858px;
+}
+
+.camera--text {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #565656;
+    line-height: 1.8;
+    width: 480px;
+    position: absolute;
+        top: 215px;
+        left: 680px;
+}
+
+.hobby--image {
+    width: 450px;
+    height: 450px;
+}
+
+/* footer */
+#footer {
+    padding-top: 80px;
+    background-color: #c09f80;
+}
+
+.contact {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: white;
+    letter-spacing: .1em;
+    font-size: 1.5em;
+}
+
+.copyright p{
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: white;
+    letter-spacing: .1em;
+    margin-bottom: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    letter-spacing: .1em;
+    transition: 0.4s;
+}
+.link:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+.links {
+    color: white;
+}
+
+.privacy {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: white;
+    font-size: 0.5em;
+}
+
+.icon--footer {
+    color: white;
+}

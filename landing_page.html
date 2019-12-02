@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <title>Ryuhei's Portfolio</title>
+</head>
+<body>
+    <div id ="wrapper">
+        <nav class="navbar navbar-expand-lg" id="navbar", style="background-color: white;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link button" href="#header">Ryuhei</a>
+                </li>
+            </ul>
+              
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link button" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link button" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link button" href="#hobby">Hobby</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link button" href="#footer">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header id="header">
+            <div class="title">
+                <h1 class="thank">Thank you for visiting my page.</h1>
+            </div>
+            <div class="icons">
+                <p>
+                    <a href="https://www.facebook.com/ryuhei0121"><i class="fab fa-facebook-f fa-fw icon"></i></a>
+                    <a href="https://twitter.com/Ryu0121cat"><i class="fab fa-twitter fa-fw icon"></i></a>
+                    <a href="gmail.com"><i class="fas fa-envelope fa-fw icon"></i></a>
+                </p>
+            </div>
+        </header>
+
+        <div class="container-fluid section1" id="about">
+            <div class="row">
+                <div class="back--message">
+                    <p>message</p>
+                </div>
+                <p class="left--message">MY MESSAGE</p>
+                <div class="cat--div">
+                    <img src="images/background_cat.jpg" alt="#" class="cat" data-aos="fade-up" data-aos-duration="900">
+                </div>
+                <div class="gym--div">
+                    <img src="images/gym.JPG" alt="#" class="gym" data-aos="fade-up" data-aos-duration="900">
+                </div>
+                <div class="youtube--div">
+                    <img src="images/Youtube.PNG" alt="#" class="youtube" data-aos="fade-up" data-aos-duration="900">
+                </div>
+                <div class="about col-md-4" id="about--top">
+                    <h1 class="about--top text-center" data-aos="fade-up" data-aos-duration="600">About Me</h1>
+                    <div class="about--intro" data-aos="fade-up" data-aos-duration="600">
+                        <p>人と人とをつなげるツールであることを意識し、お客様の喜ぶWebサイトを作成したいと思っています。</p>
+                    </div>
+                    <div class="about--background" data-aos="fade-up" data-aos-duration="600">
+                        <p>名前：カシ　リュウヘイ</p>
+                        <p>住所：大阪</p>
+                        <p>大学：京都工芸繊維大学・電気システム工学課程</p>
+                        <p>経歴：TOEIC850, Youtubeの登録者数850人, セブでIT留学</p>
+                    </div>
+                    <div class="about--contact" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor="#about--top">
+                        <p>お問い合わせ：manchester.ryu.121@gmail.com</p>
+                        <p>Twitter：@Ryu0121cat</p>
+                        <p>Facebook：ryuhei0121</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid section2" id="skills">
+            <div class="row">
+                <div class="portfolio col-md-12">
+                    <h1 class="portfolio--top text-center mb-4" data-aos="fade-up" data-aos-duration="600">Portfolio</h1>
+                    <div class="card" style="margin-left: 4%;" data-aos="fade-up" data-aos-duration="600">
+                        <img src="images/Awesome_app.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Twitter clone</h5>
+                            <p class="card-text">This is my first application.I made this app based on Rails Tutorial.</p>
+                            <a href="https://awesomeblog0121.herokuapp.com/" class="btn">Go This Application.</a>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-duration="600">
+                        <img src="images/Awesome_app.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">E-learning</h5>
+                            <p class="card-text">This is my first application.I made this app based on Rails Tutorial.</p>
+                            <a href="https://awesomeblog0121.herokuapp.com/" class="btn">Go This Application.</a>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-duration="600">
+                        <img src="images/Awesome_app.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Airbnb clone</h5>
+                            <p class="card-text">This is my first application.I made this app based on Rails Tutorial.</p>
+                            <a href="https://awesomeblog0121.herokuapp.com/" class="btn">Go This Application.</a>
+                        </div>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-duration="600">
+                        <img src="images/Awesome_app.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Slack clone</h5>
+                            <p class="card-text">This is my first application.I made this app based on Rails Tutorial.</p>
+                            <a href="https://awesomeblog0121.herokuapp.com/" class="btn">Go This Application.</a>
+                        </div>
+                    </div>
+                    <div class="skills col-md-10 offset-md-1 pt-4 pb-4">
+                        <p class="text-center skill--sets" data-aos="fade-up" data-aos-duration="600">skill sets</p>
+                        <div class="chart--top" data-aos="fade-up" data-aos-duration="800">
+                            <ul class="charts">
+                                <li class="chart--line" style="width: 80%;">
+                                    <p class="chart--label text-center">
+                                        Ruby & Rails：90%
+                                    </p>
+                                </li>
+                                <div class="chart--text">複雑なテーブル構造を持ったアプリも作成でき、Google APIを用いた連携もできます。</div>
+                                <li class="chart--line" style="width: 65%;">
+                                    <p class="chart--label text-center">
+                                        Javascript & React：80%
+                                    </p>
+                                </li>
+                                <div class="chart--text">Reactを中心に学習を進めており、SlackアプリケーションのクローンをFirebaseを用いて作成しました。</div>
+                                <li class="chart--line" style="width: 50%;">
+                                    <p class="chart--label text-center">
+                                        HTML5：60%
+                                    </p>
+                                </li>
+                                <div class="chart--text">現在SEOの勉強中です。検索をしやすくし、集客UPを心がけます。</div>
+                                <li class="chart--line" style="width: 40%;">
+                                    <p class="chart--label text-center">
+                                        CSS & SCSS：50%
+                                    </p>
+                                </li>
+                                <div class="chart--text">確実にレスポンシブ対応できるよう勉強中です。</div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid section3" id="hobby">
+            <div class="row">
+                <div class="hobby col-md-12">
+                    <h1 class="hobby--top text-center" data-aos="fade-up" data-aos-duration="600">Hobby</h1>
+                    <div class="english--parent">
+                        <div class="english-group col-md-6">
+                            <p class="english--head text-center"  data-aos="fade-up" data-aos-duration="1800">E</p>
+                            <p class="english--top" data-aos="fade-up" data-aos-anchor="#hobby--top">English</h1>
+                            <div class="english--text" data-aos="fade-up" data-aos-duration="600">
+                                <p>
+                                   言語の重要性は日々高まっています。英語もその例外ではありません。英語での情報量は日本語のそれと比にならず、そこから情報を仕入れることで、人生の選択肢も広がると思っております。コミュニケーションツールとしてはもちろん、人生をより豊かにするために英語を学ぶことは必須と言えます。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="english--div" data-aos="fade-up" data-aos-duration="600">
+                            <img src="images/conference.jpg" alt="#" class="hobby--image">
+                        </div>
+                    </div>
+                    <div class="camera--parent">
+                        <div class="camera--div" data-aos="fade-up" data-aos-duration="600">
+                            <img src="images/camera.jpg" alt="#" class="hobby--image">
+                        </div>
+                        <div class="camera--group">
+                            <p class="camera--head" data-aos="fade-up" data-aos-duration="1500">M</p>
+                            <p class="camera--top" data-aos="fade-up" data-aos-duration="600">movie</p>
+                            <div class="camera--text" data-aos="fade-up" data-aos-duration="600">
+                                <p>
+                                    動画の編集はセンスではなく、勉強すればできるようになります。自分もYoutubeに動画を投稿し始めてから少しずつ勉強し始め、シネマティック、エンターテインメントなど編集の領域を増やしつつ、それ自体を楽しんでいます。5Gの到に伴って、これからも動画の需要はさらに伸びていくことでしょう。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <footer class="border-top" id="footer">
+            <div class="bottom" style="width: 100%;">
+                <p class="text-center contact mt-4">Contact</p>
+                <div class="text-center">
+                    <div class="contact-group">
+                        <p class="links"><a href="#header" class="link">HOME</a> |
+                            <a href="#about" class="link">ABOUT</a> |
+                            <a href="#skills" class="link">SKILLS</a> |
+                            <a href="#hobby" class="link">HOBBY</a>
+                        </p>
+                    </div>
+                    <p>
+                        <a href="https://www.facebook.com/ryuhei0121"><i class="fab fa-facebook-f fa-fw icon--footer"></i></a>
+                        <a href="https://twitter.com/Ryu0121cat"><i class="fab fa-twitter fa-fw ml-2 icon--footer"></i></a>
+                        <a href="gmail.com"><i class="fas fa-envelope fa-fw ml-2 icon--footer"></i></a>
+                    </p>
+                    <p class="privacy">画像の無断転載・加工はご遠慮ください。/Please do not redistribute without my permission.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>©Ryuhei Portfolio</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
