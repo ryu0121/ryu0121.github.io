@@ -234,8 +234,8 @@ header .icons {
 }
 
 .card-img-top {
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     padding: 0;
 }
 
@@ -243,7 +243,7 @@ header .icons {
     width: 20%;
     margin-right: 3%;
     background-color: rgba(212, 171, 124, 0.9);
-    border-radius: 50px;
+    border-radius: 15px;
     display: inline-block;
 }
 
